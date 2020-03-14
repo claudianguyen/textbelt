@@ -9,7 +9,8 @@ Send a text with a simple POST request:
 ```sh
 $ curl -X POST http://my_textbelt_server/text \
    -d number=5551234567 \
-   -d "message=I sent this message for free with Textbelt"
+   -d "message=I sent this message for free with Textbelt" \
+   -d "carrier=att"
 ```
 
 `number` and `message` parameters are required.
@@ -50,6 +51,8 @@ This project uses [`nodemailer`](https://www.npmjs.com/package/nodemailer) for s
 
 - **`transport`** should be a Nodemailer transport [documented here](https://nodemailer.com/plugins/create/#transports)
 - **`mailOptions`** fields should include at least include the `from` field, but you can include any of the fields [documented here](https://nodemailer.com/message/).
+
+Run `npm install` and `npm start` to start the service.
 
 A sample transport with SMTP sending is included.
 
